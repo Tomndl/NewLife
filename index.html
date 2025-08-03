@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewLife WL - Serveur GTA RP WL</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-content">
+            <div class="splash-image-container">
+                <img src="images/splash-logo.png" alt="NewLife WL Logo" class="splash-logo">
+            </div>
+            <button class="btn btn-splash" onclick="accessSite()">
+                Acceder au site
+            </button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>NewLife WL</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link" onclick="navigateTo('accueil')">Accueil</a></li>
+                <li><a href="#" class="nav-link" onclick="navigateTo('serveur')">Serveur</a></li>
+                <li><a href="#" class="nav-link" onclick="navigateTo('staff')">Staff</a></li>
+                <li><a href="#" class="nav-link" onclick="navigateTo('galerie')">Galerie</a></li>
+                <li><a href="#" class="nav-link" onclick="navigateTo('contact')">Discord</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pages Container -->
+    <div id="pages-container">
+        <!-- Page Accueil -->
+        <div id="page-accueil" class="page active">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">NewLife WL</h1>
+                    <p class="hero-subtitle">L'expérience GTA RP la plus immersive et professionnelle</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="joinServer()">Rejoindre le Serveur</button>
+                    </div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Joueurs Actifs</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-clock"></i>
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Disponibilité</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-star"></i>
+                        <span class="stat-number">4.9</span>
+                        <span class="stat-label">Note Moyenne</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Page Serveur -->
+        <div id="page-serveur" class="page">
+            <section class="server-section">
+                <div class="container">
+                    <h2 class="section-title">Serveur Premium NewLife WL</h2>
+                    <div class="server-info">
+                        <div class="server-card">
+                            <i class="fas fa-server"></i>
+                            <h3>Informations Serveur</h3>
+                            <ul>
+                                <li><strong>IP:</strong> Soon...</li>
+                                <li><strong>Port:</strong> 31210</li>
+                                <li><strong>Slots:</strong> 128 joueurs</li>
+                                <li><strong>Uptime:</strong> 99.9%</li>
+                            </ul>
+                        </div>
+                        <div class="server-card">
+                            <i class="fas fa-cogs"></i>
+                            <h3>Fonctionnalités</h3>
+                            <ul>
+                                <li>Économie ultra-réaliste</li>
+                                <li>Jobs exclusifs</li>
+                                <li>Système de gangs avancé</li>
+                                <li>Propriétés de luxe</li>
+                                <li>Véhicules rares et uniques</li>
+                            </ul>
+                        </div>
+                        <div class="server-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Sécurité</h3>
+                            <ul>
+                                <li>Anti-cheat professionnel</li>
+                                <li>Modération 24/7</li>
+                                <li>Backup sécurisé</li>
+                                <li>Support premium</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="server-join">
+                        <button class="btn btn-primary btn-large" onclick="joinServer()">
+                            <i class="fas fa-play"></i>
+                            Rejoindre NewLife WL
+                        </button>
+                        <p class="server-join-info">Cliquez pour lancer FiveM</p>
+                        
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Page Staff -->
+        <div id="page-staff" class="page">
+            <section class="staff-section">
+                <div class="container">
+                    <div class="staff-header">
+                        <h2 class="section-title">Équipe Staff NewLife</h2>
+                        <p class="section-subtitle">Découvrez notre équipe de modération dédiée</p>
+                    </div>
+                    
+                    <div class="staff-categories">
+                        <div class="staff-card">
+                            <div class="staff-icon">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <h3>Fondateur</h3>
+                            <p>Fondateur et directeur principal du serveur</p>
+                            <div class="staff-features">
+                                <span><i class="fas fa-check"></i> Direction générale</span>
+                                <span><i class="fas fa-check"></i> Vision stratégique</span>
+                                <span><i class="fas fa-check"></i> Décisions finales</span>
+                            </div>
+                            <button class="btn btn-staff" onclick="navigateTo('staff-fondateur')">
+                                <i class="fas fa-users"></i>
+                                Voir l'équipe
+                            </button>
+                        </div>
+
+                        <div class="staff-card">
+                            <div class="staff-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3>Co-fondateur</h3>
+                            <p>Co-fondateur et directeur adjoint du serveur</p>
+                            <div class="staff-features">
+                                <span><i class="fas fa-check"></i> Direction adjointe</span>
+                                <span><i class="fas fa-check"></i> Gestion équipe</span>
+                                <span><i class="fas fa-check"></i> Développement</span>
+                            </div>
+                            <button class="btn btn-staff" onclick="navigateTo('staff-cofondateur')">
+                                <i class="fas fa-users"></i>
+                                Voir l'équipe
+                            </button>
+                        </div>
+
+
+
+                        <div class="staff-card">
+                            <div class="staff-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h3>Responsable</h3>
+                            <p>Responsable de secteur et modération</p>
+                            <div class="staff-features">
+                                <span><i class="fas fa-check"></i> Modération</span>
+                                <span><i class="fas fa-check"></i> Support joueurs</span>
+                                <span><i class="fas fa-check"></i> Gestion conflits</span>
+                            </div>
+                            <button class="btn btn-staff" onclick="navigateTo('staff-responsable')">
+                                <i class="fas fa-users"></i>
+                                Voir l'équipe
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="staff-info">
+                        <div class="staff-feature">
+                            <i class="fas fa-clock"></i>
+                            <h4>Disponibilité 24/7</h4>
+                            <p>Notre équipe est disponible en permanence</p>
+                        </div>
+                        <div class="staff-feature">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>Formation Continue</h4>
+                            <p>Nos staffs sont formés régulièrement</p>
+                        </div>
+                        <div class="staff-feature">
+                            <i class="fas fa-heart"></i>
+                            <h4>Passionnés</h4>
+                            <p>Une équipe dévouée à votre expérience</p>
+                        </div>
+                    </div>
+                    
+                    <div class="staff-stats">
+                        <div class="stat-card">
+                            <i class="fas fa-users"></i>
+                            <h3>15+</h3>
+                            <p>Membres staff</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-clock"></i>
+                            <h3>24/7</h3>
+                            <p>Disponibilité</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-star"></i>
+                            <h3>4.8/5</h3>
+                            <p>Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Page Galerie -->
+        <div id="page-galerie" class="page">
+            <section class="gallery-section">
+                <div class="container">
+                    <h2 class="section-title">Galerie</h2>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="images/ville-onestory.jpg" alt="Ville OneStory - Centre-ville">
+                            <div class="gallery-overlay">
+                                <h3>Ville NewLife WL</h3>
+                                <p>Centre-ville moderne et dynamique</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/vehicules-premium.jpg" alt="Véhicules Premium OneStory">
+                            <div class="gallery-overlay">
+                                <h3>Véhicules Premium</h3>
+                                <p>Collection exclusive de véhicules rares</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/jobs-exclusifs.jpg" alt="Jobs Exclusifs OneStory">
+                            <div class="gallery-overlay">
+                                <h3>Jobs Exclusifs</h3>
+                                <p>Métiers uniques et rémunérateurs</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/communaute-active.jpg" alt="Communauté Active OneStory">
+                            <div class="gallery-overlay">
+                                <h3>Communauté Active</h3>
+                                <p>Plus de 500 joueurs connectés</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Page Discord -->
+        <div id="page-contact" class="page">
+            <section class="discord-section">
+                <div class="container">
+                    <h2 class="section-title">Rejoignez notre Discord</h2>
+                    <div class="discord-content">
+                        <div class="discord-card">
+                            <i class="fab fa-discord"></i>
+                            <h3>Communauté Discord</h3>
+                            <p>Rejoignez notre communauté Discord pour rester connecté avec les autres joueurs, recevoir les dernières nouvelles et participer aux événements du serveur.</p>
+                            <div class="discord-features">
+                                <div class="feature">
+                                    <i class="fas fa-users"></i>
+                                    <span>Communauté active</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-bell"></i>
+                                    <span>Annonces en temps réel</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-headset"></i>
+                                    <span>Support vocal</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Événements exclusifs</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-discord">
+                                <i class="fab fa-discord"></i>
+                                Rejoindre le Discord
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Page Staff Fondateur -->
+        <div id="page-staff-fondateur" class="page">
+            <section class="staff-detail-section">
+                <div class="container">
+                    <div class="staff-detail-header">
+                        <button class="btn btn-back" onclick="navigateTo('staff')">
+                            <i class="fas fa-arrow-left"></i>
+                            Retour au Staff
+                        </button>
+                        <h2 class="section-title">Équipe Fondateur</h2>
+                        <p class="section-subtitle">Direction générale et vision stratégique du serveur</p>
+                    </div>
+                    
+                    <div class="staff-members">
+                        <div class="staff-member">
+                            <div class="member-avatar">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <div class="member-info">
+                                <h3>Zarmatoo</h3>
+                                <p class="member-role">Fondateur</p>
+                                <div class="member-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Disponible 24/7</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="staff-member">
+                            <div class="member-avatar">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <div class="member-info">
+                                <h3>Dalil</h3>
+                                <p class="member-role">Fondateur</p>
+                                <div class="member-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Disponible 24/7</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="staff-member">
+                            <div class="member-avatar">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <div class="member-info">
+                                <h3>Brody</h3>
+                                <p class="member-role">Fondateur</p>
+                                <div class="member-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Disponible 24/7</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="staff-member">
+                            <div class="member-avatar">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <div class="member-info">
+                                <h3>Gratouille</h3>
+                                <p class="member-role">Fondateur</p>
+                                <div class="member-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Disponible 24/7</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Page Staff Co-fondateur -->
+        <div id="page-staff-cofondateur" class="page">
+            <section class="staff-detail-section">
+                <div class="container">
+                    <div class="staff-detail-header">
+                        <button class="btn btn-back" onclick="navigateTo('staff')">
+                            <i class="fas fa-arrow-left"></i>
+                            Retour au Staff
+                        </button>
+                        <h2 class="section-title">Équipe Co-fondateur</h2>
+                        <p class="section-subtitle">Direction adjointe et gestion d'équipe</p>
+                    </div>
+                    
+                    <div class="staff-members">
+                                                 <div class="staff-member">
+                             <div class="member-avatar">
+                                 <i class="fas fa-star"></i>
+                             </div>
+                             <div class="member-info">
+                                 <h3>Nexo</h3>
+                                 <p class="member-role">Co-fondateur</p>
+                                 <div class="member-stats">
+                                     <div class="stat">
+                                         <i class="fas fa-clock"></i>
+                                         <span>Disponible 24/7</span>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+        <!-- Page Staff Responsable -->
+        <div id="page-staff-responsable" class="page">
+            <section class="staff-detail-section">
+                <div class="container">
+                    <div class="staff-detail-header">
+                        <button class="btn btn-back" onclick="navigateTo('staff')">
+                            <i class="fas fa-arrow-left"></i>
+                            Retour au Staff
+                        </button>
+                        <h2 class="section-title">Équipe Responsable</h2>
+                        <p class="section-subtitle">Modération et support joueurs</p>
+                    </div>
+                    
+                    <div class="staff-members">
+                        <div class="staff-member">
+                            <div class="member-avatar">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="member-info">
+                                <h3>Fvbio</h3>
+                                <p class="member-role">Responsable</p>
+                                <div class="member-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Disponible 24/7</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="staff-member">
+                            <div class="member-avatar">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="member-info">
+                                <h3>Ilyes</h3>
+                                <p class="member-role">Responsable</p>
+                                <div class="member-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Disponible 24/7</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="staff-member">
+                            <div class="member-avatar">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="member-info">
+                                <h3>Se3la</h3>
+                                <p class="member-role">Responsable</p>
+                                <div class="member-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Disponible 24/7</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>NewLife WL</h3>
+                    <p>L'expérience GTA RP la plus immersive et professionnelle</p>
+                    <div class="social-links">
+                        <a href="#" class="discord-link"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="#" onclick="navigateTo('accueil')">Accueil</a></li>
+                        <li><a href="#" onclick="navigateTo('serveur')">Serveur</a></li>
+                        <li><a href="#" onclick="navigateTo('staff')">Staff</a></li>
+                        <li><a href="#" onclick="navigateTo('galerie')">Galerie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Guide Débutant</a></li>
+                        <li><a href="#">Support Premium</a></li>
+                        <li><a href="#">Conditions d'utilisation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 By Grvtouille. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
